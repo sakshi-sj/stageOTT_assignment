@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "dev": "ts-node src/index.ts",
+    "start": "node ./dist/src/index.js",
+    "build": "tsc",
+    "heroku-postbuild": "npm run build",
     "test": "jest"
   },
   "keywords": [],
@@ -24,6 +27,7 @@
     "@faker-js/faker": "^8.4.1",
     "faker": "^6.6.6",
     "mongoose": "^8.3.4",
-    "redis": "^4.6.13"
+    "redis": "^4.6.13",
+    "tsc": "^2.0.4"
   }
 }
